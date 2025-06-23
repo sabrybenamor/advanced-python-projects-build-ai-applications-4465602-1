@@ -1,7 +1,17 @@
-
+from textblob import TextBlob
 
 # Define intents and their corresponding responses based on keywords
-
+intents = {
+    "hours":{
+        "keyword":["hours","open","close"],
+        "response":"we are open from 9AM to 5PM"
+    },
+    "return":{
+        "keyword":["refund","money back","return"],
+        "response":"I'd be happy to help you with the return prorcess.Let me transfer you to a live agent"
+    }
+}
+def get_response(message):
     # Convert the message to lowercase for consistent keyword matching
   
     # Check if the message contains any keywords associated with defined intents
